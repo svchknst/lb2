@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        function mas() {
+            var n = document.forms["form"].elements["N"].value;
+            var k = document.forms["form"].elements["K"].value;
+            var massiv = n.split(' ');
+            var a = [];
+            for (let i = 0; i < massiv.length; i++) {
+                if (massiv[i] > k) {
+                    a[i] = massiv[i];
+                }
+            }
+            document.write(a.join(' '));
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" placeholder="Введите число n" id="N">
+        <input type="text" placeholder="Введите число k" id="K">
+        <input type="button" onclick="mas()" value="Отправить">
+    </form>
+</body>
+
+</html>
